@@ -79,7 +79,12 @@ cd ~/bustub && find . -type f -name "*_test" -exec {} --gtest_also_run_disabled_
 ```
 
 官方 5 个用例全部通过（含并发插入与二进制数据用例）。
+### 测试运行截图
 
+![P1 测试结果](screenshots/01-test-results.png)
+
+> 用 `--gtest_also_run_disabled_tests` 运行官方隐藏用例，
+> 5 个用例全部 PASSED（哈希表 2 个、LRU-K 1 个、缓冲池 2 个）。
 ## 六、可改进之处
 
 - 目前哈希表只支持扩容、不收缩；数据量大幅下降时目录与桶会一直占用内存。作业未要求，故未实现。
